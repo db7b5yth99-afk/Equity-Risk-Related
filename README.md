@@ -6,6 +6,12 @@
     - Time Series Analysis Toolkit/A Dynamic FFT Implementation on TSA.py
         - This reflect my learning progress a lot and is by far the most complicated project. On top of that, I see a lot of potential in it. 
 
+- Research Paper Backed Project
+    - Summer Resaerch Assistant/Mean_Reversion_Trading_Algo_(Tsang_et_al).py
+        - Tsang, M. Y., Sit, T., & Wong, H. Y. (2025). Adaptive robust online portfolio selection. 
+European Journal of Operational Research, 321(1), 214–230.
+        - A mean reversion plus robust optimization model that consider transaction cost. 
+
 - Completed Project (From Latest to Oldest):
     - Time series analysis toolkit
         - A Dynamic FFT Implementation on TSA
