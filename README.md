@@ -6,11 +6,13 @@
     - Time Series Analysis Toolkit/A Dynamic FFT Implementation on TSA.py
         - This reflect my learning progress a lot and is by far the most complicated project. On top of that, I see a lot of potential in it. 
 
-- Research Paper Backed Project
+- Research Paper Model Recreation
     - Summer Resaerch Assistant/Mean_Reversion_Trading_Algo_(Tsang_et_al).py
-        - Tsang, M. Y., Sit, T., & Wong, H. Y. (2025). Adaptive robust online portfolio selection. 
-European Journal of Operational Research, 321(1), 214–230.
         - A mean reversion plus robust optimization model that consider transaction cost. 
+        - Tsang, M. Y., Sit, T., & Wong, H. Y. (2025). Adaptive robust online portfolio selection. European Journal of Operational Research, 321(1), 214–230.
+    - Summer Resaerch Assistant/Momentum_Trading_Algo_(Li_et_al).py
+        - A momenum chasing strategy to increase the weight of high performer exponentially. 
+        - Li, Jiahao & Zhang, Yong & Zheng, Xiaoteng, 2026. "Dynamic mode decomposition for online portfolio selection task," European Journal of Operational Research, Elsevier, vol. 328(1), pages 349-365. 
 
 - Completed Project (From Latest to Oldest):
     - Time series analysis toolkit
