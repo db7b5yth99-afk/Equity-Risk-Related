@@ -1,20 +1,28 @@
 # About this space
-- This is the place where I save my personal Python projects. 
+- This is the place where I save my Python projects. 
 
-# Visitor Guide
-- Highlighted Project
-    - Time Series Analysis Toolkit/A Dynamic FFT Implementation on TSA.py
-        - This reflect my learning progress a lot and is by far the most complicated project. On top of that, I see a lot of potential in it. 
-
-- Research Paper Model Recreation
-    - Summer Resaerch Assistant/Mean_Reversion_Trading_Algo_(Tsang_et_al).py
-        - A mean reversion plus robust optimization model that consider transaction cost. 
+# Project Index
+- Research Paper Model Recreation & Modifying (Exect working hyperparameter pool are not povided)
+    - Online Portfolio Selection/Adaptive_Mean_Reversion_Trading_Algo_(Tsang_et_al).py
+        - A mean reversion plus robust optimization model that consider transaction cost.
+        - Slightly modified the parameter selection logic with EWMA and optimization logic to allow risk seeking behaviour in some regimes.
+        - Credit: Tsang et al (2025)
+    - Online Portfolio Selection/Dynamic_Mode_Decomposition_Algo_(Li_et_al).py
+        - A momenum chasing strategy to increase the weight of high performer exponentially.
+        - Exect replicate
+        - Credit: Li et al (2026)
+    - Online Portfolio Selection/Robust_Momentum_Optimizing_Trading_Algo_(Hybrid).py
+        - Combined DMD and robust optimization
+        - Credit: Li et al (2026), Tsang et al (2025)
+    - Online Portfolio Selection/Adaptive_Dynamic_Mode_Decomposition_(Hybrid).py
+        - Combined DMD, robust optimization and dynamic parameter selection with EWMA logic.
+        - So far 
+        - Credit: Li et al (2026), Tsang et al (2025)
+    - Referance list:
+        - Li, Jiahao & Zhang, Yong & Zheng, Xiaoteng, 2026. "Dynamic mode decomposition for online portfolio selection task," European Journal of Operational Research, Elsevier, vol. 328(1), pages 349-365.
         - Tsang, M. Y., Sit, T., & Wong, H. Y. (2025). Adaptive robust online portfolio selection. European Journal of Operational Research, 321(1), 214–230.
-    - Summer Resaerch Assistant/Momentum_Trading_Algo_(Li_et_al).py
-        - A momenum chasing strategy to increase the weight of high performer exponentially. 
-        - Li, Jiahao & Zhang, Yong & Zheng, Xiaoteng, 2026. "Dynamic mode decomposition for online portfolio selection task," European Journal of Operational Research, Elsevier, vol. 328(1), pages 349-365. 
 
-- Completed Project (From Latest to Oldest):
+- Skills Learning Projects (From Latest to Oldest):
     - Time series analysis toolkit
         - A Dynamic FFT Implementation on TSA
             - Build a model that dynamically apply FFT in different window at a list of specified period to better decompose the time series cycles.
