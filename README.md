@@ -4,19 +4,19 @@
 # Project Index
 - Research Paper Model Recreation & Modifying (Exect working hyperparameter pool are not povided)
     - Online Portfolio Selection/Adaptive_Mean_Reversion_Trading_Algo_(Tsang_et_al).py
-        - A mean reversion plus robust optimization model that consider transaction cost.
+        - A mean reversion, robust optimization ply dynamic parameter selection model that consider transaction cost.
         - Slightly modified the parameter selection logic with EWMA and optimization logic to allow risk seeking behaviour in some regimes.
         - Credit: Tsang et al (2025)
-    - Online Portfolio Selection/Dynamic_Mode_Decomposition_Algo_(Li_et_al).py
-        - A momenum chasing strategy to increase the weight of high performer exponentially.
-        - Exect replicate
+    - Online Portfolio Selection/Recursive_OLS_Algo_(Li_et_al).py
+        - A recursive least square prediction combined with exponantial weighting FTW strategy.
+        - Note: DMD is just a hype, I do not see it appear in the paper, its just multiple regression with Sherman-Morrison updating, and allocated with exponential gradient
         - Credit: Li et al (2026)
-    - Online Portfolio Selection/Robust_Momentum_Optimizing_Trading_Algo_(Hybrid).py
-        - Combined DMD and robust optimization
+    - Online Portfolio Selection/Robust_Optimized_Recursive_OLS_Trading_Algo_(Hybrid).py
+        - Combined recursive least square prediction and robust optimization
         - Credit: Li et al (2026), Tsang et al (2025)
-    - Online Portfolio Selection/Adaptive_Dynamic_Mode_Decomposition_(Hybrid).py
-        - Combined DMD, robust optimization and dynamic parameter selection with EWMA logic.
-        - So far 
+    - Online Portfolio Selection/Adaptive_Recursive_OLS_(Hybrid).py
+        - Combined recursive least square prediction, robust optimization and dynamic parameter selection with EWMA logic.
+        - Note: This is absolutely not worth doing, the return is worse then constant parameter or mean reversion. 
         - Credit: Li et al (2026), Tsang et al (2025)
     - Referance list:
         - Li, Jiahao & Zhang, Yong & Zheng, Xiaoteng, 2026. "Dynamic mode decomposition for online portfolio selection task," European Journal of Operational Research, Elsevier, vol. 328(1), pages 349-365.
