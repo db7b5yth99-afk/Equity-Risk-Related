@@ -24,6 +24,8 @@
 
 - Skills Learning Projects (From Latest to Oldest):
     - Time series analysis toolkit
+        - A DMD Approach for Index Prediction
+            - Applied Dynamic Mode Decomposition to predict S&P 500 1-day Close based on behaviour of different concept ETFs. 
         - A Dynamic FFT Implementation on TSA
             - Build a model that dynamically apply FFT in different window at a list of specified period to better decompose the time series cycles.
             - Include Gaussian fade-in and out option to simulate reallife financal time series pereformance. 
