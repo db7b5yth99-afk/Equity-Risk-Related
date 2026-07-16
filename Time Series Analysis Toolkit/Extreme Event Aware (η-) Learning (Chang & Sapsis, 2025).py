@@ -10,7 +10,7 @@ from numpy.lib.stride_tricks import sliding_window_view
 tickers = ["^GSPC"]
 df=yf.download(tickers=tickers,  start="2010-01-01", end="2025-12-31")['Close'].squeeze()
 
-"""Detect Correlation Breakdown to Seperate Adverse and Normal Market Condition"""
+"""Seperate Adverse and Normal Market Condition"""
 
 df_ret = 1 + df.pct_change().dropna()
 percentile_threshold = df_ret.quantile(0.05)
