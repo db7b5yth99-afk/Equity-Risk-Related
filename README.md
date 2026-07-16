@@ -3,6 +3,10 @@
 
 # Project Index
 - Research Paper Model Recreation & Modifying (Exect working hyperparameter pool are not povided)
+    - Time Series Analysis Toolkit/Extreme Event Aware (η-) Learning (Chang & Sapsis, 2025).py
+        - Unsuccessful attempt to use deeplearning to generate extreme event awared predictor.
+        - Subjected to further investigation.
+        - Credit: Chang, K., & Sapsis, T. P. (2025)
     - Online Portfolio Selection/Adaptive_Mean_Reversion_Trading_Algo_(Tsang_et_al).py
         - A mean reversion, robust optimization ply dynamic parameter selection model that consider transaction cost.
         - Slightly modified the parameter selection logic with EWMA and optimization logic to allow risk seeking behaviour in some regimes.
@@ -19,6 +23,7 @@
         - Note: This is absolutely not worth doing, the return is worse then constant parameter or mean reversion. 
         - Credit: Li et al (2026), Tsang et al (2025)
     - Referance list:
+        - Chang, K., & Sapsis, T. P. (2025). Extreme event aware ($\eta$-) learning. arXiv preprint arXiv:2510.19161.
         - Li, Jiahao & Zhang, Yong & Zheng, Xiaoteng, 2026. "Dynamic mode decomposition for online portfolio selection task," European Journal of Operational Research, Elsevier, vol. 328(1), pages 349-365.
         - Tsang, M. Y., Sit, T., & Wong, H. Y. (2025). Adaptive robust online portfolio selection. European Journal of Operational Research, 321(1), 214–230.
 
