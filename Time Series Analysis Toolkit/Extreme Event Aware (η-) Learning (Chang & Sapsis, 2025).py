@@ -10,10 +10,10 @@ from numpy.lib.stride_tricks import sliding_window_view
 tickers = ["^GSPC"]
 df=yf.download(tickers=tickers,  start="2010-01-01", end="2025-12-31")['Close'].squeeze()
 
-"""Detect Extreme Event"""
+"""Detect Correlation Breakdown to Seperate Adverse and Normal Market Condition"""
 
 df_ret = 1 + df.pct_change().dropna()
-percentile_threshold = df_ret.quantile(0.01)
+percentile_threshold = df_ret.quantile(0.05)
 ext_idx = df_ret[df_ret <= percentile_threshold].index
 norm_idx = [i for i in df_ret.index if i not in set(ext_idx)]
 norm_df = df_ret.loc[norm_idx]
@@ -34,22 +34,24 @@ class Model(nn.Module):
         x = self.output_layer(x)
         return x
 
-def generate_gpd_samples(num_samples, loc, scale, shape):
-    gp_dist = torch.distributions.GeneralizedPareto(loc=loc, scale=scale, concentration=shape)
-    samples = gp_dist.sample([num_samples])
-    return samples
+def gpd_icdf(q, loc, scale, shape):
+    if shape != 0:
+        return loc + (scale / shape) * ((1 - q)**(-shape) - 1)
+    else:
+        return loc - scale * torch.log(1 - q)
 
-def custom_eta_loss(y_pred, y_true, lambda_param, loc, scale, shape):
+def custom_eta_loss(y_pred, y_true, lambda_param, loc, scale, shape, tau=0.05):
     mse = torch.nn.functional.mse_loss(y_pred, y_true)
-    tail_preds = y_pred[y_pred <= torch.quantile(y_pred, 0.001)]
-    tail_true = generate_gpd_samples(len(tail_preds), loc, scale, shape)
-    tail_preds_sorted, _ = torch.sort(tail_preds)
-    tail_true_sorted, _ = torch.sort(tail_true)
-    W1 = torch.mean(torch.abs(tail_preds_sorted - tail_true_sorted))
+    tail_threshold = torch.quantile(y_pred, tau)
+    tail_preds = y_pred[y_pred <= tail_threshold]
+    if len(tail_preds) < 2:
+        return mse, mse, torch.tensor(0.0)
+    tail_preds_sorted, _ = torch.sort(tail_preds.squeeze())
+    q_grid = torch.linspace(0.0001, tau, len(tail_preds_sorted), device=y_pred.device)
+    tail_true_theoretical = gpd_icdf(q_grid, loc, scale, shape)
+    W1 = torch.mean(torch.abs(tail_preds_sorted - tail_true_theoretical))
     total_loss = mse + lambda_param * W1
     return total_loss, mse, W1
-
-
 
 """Fitting & Training"""
 
@@ -80,15 +82,27 @@ y_train = torch.tensor(y_train_raw[valid_mask], dtype=torch.float32).view(-1, 1)
 # Optimizer
 model = Model()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
-epochs = 80
-lambda_param = 0.01
+epochs = 200 
+lambda_param = 0.8
 
 for epoch in range(epochs):
+    # Pre-training
+    current_lambda = 0.0 if epoch < 75  else lambda_param
     y_pred = model(X_train)
-    loss, mse, W1 = custom_eta_loss(y_pred, y_train, lambda_param, loc, scale, shape)
+    loss, mse, W1 = custom_eta_loss(
+        y_pred,
+        y_train,
+        current_lambda,
+        loc,
+        scale,
+        shape,
+        tau=0.05 
+    )
     optimizer.zero_grad()
     loss.backward()
     optimizer.step()
+    if epoch % 10 == 0:
+        print(f"Epoch {epoch} | Loss: {loss.item():.4f} | MSE: {mse.item():.4f} | W1: {W1.item():.4f}")
 
 """Model Testing"""
 
