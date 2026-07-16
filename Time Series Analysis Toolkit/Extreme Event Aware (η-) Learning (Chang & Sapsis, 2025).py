@@ -10,7 +10,7 @@ from numpy.lib.stride_tricks import sliding_window_view
 tickers = ["^GSPC"]
 df=yf.download(tickers=tickers,  start="2010-01-01", end="2025-12-31")['Close'].squeeze()
 
-"""Detect Correlation Breakdown to Seperate Adverse and Normal Market Condition"""
+"""Detect Extreme Event"""
 
 df_ret = 1 + df.pct_change().dropna()
 percentile_threshold = df_ret.quantile(0.01)
@@ -24,13 +24,11 @@ ext_df = df_ret.loc[ext_idx]
 class Model(nn.Module):
     def __init__(self):
         super().__init__()
-        # Let's use 16 neurons for our hidden layer
         self.hidden_layer = nn.Linear(in_features=5, out_features=16)
         self.activation = nn.LeakyReLU()
         self.output_layer = nn.Linear(in_features=16, out_features=1)
 
     def forward(self, x):
-        # This is how the data 'x' flows through our network
         x = self.hidden_layer(x)
         x = self.activation(x)
         x = self.output_layer(x)
@@ -42,16 +40,12 @@ def generate_gpd_samples(num_samples, loc, scale, shape):
     return samples
 
 def custom_eta_loss(y_pred, y_true, lambda_param, loc, scale, shape):
-    # 1. Calculate the standard MSE loss
     mse = torch.nn.functional.mse_loss(y_pred, y_true)
-    # 2. Extract the tails of y_pred and y_true
     tail_preds = y_pred[y_pred <= torch.quantile(y_pred, 0.001)]
     tail_true = generate_gpd_samples(len(tail_preds), loc, scale, shape)
-    # 3. Calculate the Wasserstein distance between those tails
     tail_preds_sorted, _ = torch.sort(tail_preds)
     tail_true_sorted, _ = torch.sort(tail_true)
     W1 = torch.mean(torch.abs(tail_preds_sorted - tail_true_sorted))
-    # 4. Combine them: MSE + lambda * W1
     total_loss = mse + lambda_param * W1
     return total_loss, mse, W1
 
@@ -64,6 +58,7 @@ shape, loc, scale = genpareto.fit(ext_df.to_numpy())
 loc = torch.tensor(loc)
 scale = torch.tensor(scale)
 shape = torch.tensor(shape)
+
 # Normal Data
 all_data = df_ret.to_numpy()
 X_raw_all = sliding_window_view(all_data[:-1], window_shape=5)
@@ -97,17 +92,11 @@ for epoch in range(epochs):
 
 """Model Testing"""
 
-# 1. Put the model in evaluation mode (freezes dropout/batchnorm layers if you add them later)
 model.eval()
 
-# 2. Turn off the gradient engine to save memory and speed up computation
 with torch.no_grad():
-    # The model takes the final exam
     y_test_pred = model(X_test)
-
-    # Grade the exam using your custom EVT loss
     test_loss, test_mse, test_W1 = custom_eta_loss(y_test_pred, y_test, lambda_param, loc, scale, shape)
-
     print(f"Training Complete! \nFinal Test Loss: {test_loss.item():.4f}\nFinal MSE: {test_mse.item():.4f}\nFinal W1: {test_W1.item():.4f}")
 
 
