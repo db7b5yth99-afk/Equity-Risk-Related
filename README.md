@@ -1,5 +1,6 @@
 # About this space
-- This is the place where I save my Python projects. 
+- This is the place where I save my Python learning projects, you may understand my knowledge base pretty well here. 
+- Request of accessing private respritory is selectively avaliable on request (F2F required).
 
 # Project Index
 - Research Paper Model Recreation & Modifying (Exect working hyperparameter pool are not povided)
