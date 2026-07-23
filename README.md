@@ -6,8 +6,9 @@
 # Project Index
 - Research Paper Model Recreation & Modifying _(OLPS related topic built on frictionless assumption)_ 
     - Time Series Analysis Toolkit/Extreme Event Aware (η-) Learning (Chang & Sapsis, 2025).py
-        - Unsuccessful attempt to use deeplearning to generate extreme event awared predictor.
-        - Subjected to further investigation.
+        - Use semi-supervised deeplearning to generate extreme event awared path for stress-testing.
+        - Completely adapted the original logic to time series related work.
+        - Probably the most useful thing you can find in this respritory, haha \(^V^)/
         - Credit: Chang, K., & Sapsis, T. P. (2025)
     - Online Portfolio Selection/Adaptive_Mean_Reversion_Trading_Algo_(Tsang_et_al).py
         - A mean reversion, robust optimization ply dynamic parameter selection model that consider transaction cost.
