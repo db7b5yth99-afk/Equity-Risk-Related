@@ -3,6 +3,9 @@
 - Code here are useful as I may use them to feed LLM for localization when doing simular task. 
 - Request of accessing private respritory is selectively avaliable on request.
 
+<img width="165" height="149" alt="image" src="https://github.com/user-attachments/assets/f62a43ce-d401-4027-bd3a-40fefdf023e3" />
+
+
 # Project Index
 - Research Paper Model Recreation & Modifying _(OLPS related topic built on frictionless assumption)_ 
     - Time Series Analysis Toolkit/Extreme Event Aware (η-) Learning (Chang & Sapsis, 2025).py
