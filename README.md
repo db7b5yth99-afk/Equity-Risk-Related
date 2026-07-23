@@ -1,9 +1,10 @@
 # About this space
 - This is the place where I save my Python learning projects, you may understand my knowledge base pretty well here. 
-- Request of accessing private respritory is selectively avaliable on request (F2F required).
+- Code here are useful as I may use them to feed LLM for localization when doing simular task. 
+- Request of accessing private respritory is selectively avaliable on request.
 
 # Project Index
-- Research Paper Model Recreation & Modifying (Exect working hyperparameter pool are not povided)
+- Research Paper Model Recreation & Modifying _(OLPS related topic built on frictionless assumption)_ 
     - Time Series Analysis Toolkit/Extreme Event Aware (η-) Learning (Chang & Sapsis, 2025).py
         - Unsuccessful attempt to use deeplearning to generate extreme event awared predictor.
         - Subjected to further investigation.
@@ -14,7 +15,7 @@
         - Credit: Tsang et al (2025)
     - Online Portfolio Selection/Recursive_OLS_Algo_(Li_et_al).py
         - A recursive least square prediction combined with exponantial weighting FTW strategy.
-        - Note: DMD is just a hype, I do not see it appear in the paper, its just multiple regression with Sherman-Morrison updating, and allocated with exponential gradient
+        - Note: DMD is just a hype, I do not see it appear in the paper, its just recursive multiple regression with Sherman-Morrison updating, and allocated with exponential gradient
         - Credit: Li et al (2026)
     - Online Portfolio Selection/Robust_Optimized_Recursive_OLS_Trading_Algo_(Hybrid).py
         - Combined recursive least square prediction and robust optimization
@@ -37,11 +38,6 @@
             - Include Gaussian fade-in and out option to simulate reallife financal time series pereformance. 
         - Economic cycle indicator
             - Build indicator based on 20y historical data using fast fourier transform. 
-    - Economic cycle analysis
-        - Apply time series analysis to analysis past economic cycles (S&P 500 is selected as analyzing target). 
-        - Identify and label "turning point" dates that have significant contribution of creating each economic cycles.
-        - Use LLM to identify key events in these dates and learn the key driver of economic cycles.
-    - Time series analysis toolkit
         - Single equity analysis
             - Use SVJ model alongside GARCH(1,1) to visualize upside and downside risk of single stock including volatile microcaps.
         - Portfolio risk analysis
