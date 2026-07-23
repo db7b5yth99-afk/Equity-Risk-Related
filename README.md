@@ -2,7 +2,7 @@
 - This is the place where I save my Python learning projects, you may understand my knowledge base pretty well here. 
 - Code here are useful as I may use them to feed LLM for localization when doing simular task. 
 - Request of accessing private respritory is selectively avaliable on request.
-https://tenor.com/view/%E6%84%9B%E8%8E%89%E5%B8%8C%E9%9B%85-gif-11356176830518263325
+
 
 # Project Index
 - Research Paper Model Recreation & Modifying _(OLPS related topic built on frictionless assumption)_ 
