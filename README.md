@@ -6,7 +6,7 @@
 
 # Project Index
 - Research Paper Model Recreation & Modifying _(OLPS related topic built on frictionless assumption)_ 
-    - Time Series Analysis Toolkit/Extreme Event Aware (η-) Learning (Chang & Sapsis, 2025) inspired Time Series Sample Generator.py.py
+    - Time Series Analysis Toolkit/Extreme Event Aware (η-) Learning (Chang & Sapsis, 2025) inspired Time Series Sample Generator.py
         - Use semi-supervised deeplearning to generate extreme event awared path for stress-testing.
         - Completely adapted the original logic to time series related work.
         - Probably the most useful thing you can find in this respritory, haha \(^V^)/
