@@ -44,9 +44,7 @@
             - Use SVJ model alongside GARCH(1,1) to visualize upside and downside risk of single stock including volatile microcaps.
         - Portfolio risk analysis
             - Use GBM to estimate a diversified portfolio upside and downside risk. 
-        - Synthetic portfolio for single equity (Not working)
-            - Use linear regression (tried Ridge and Lasso) to fit a portfolio of equity to a newly IPO stock.
-            - Not working as expected due to insufficient historical data, I'll be back after a while.
+
 
 # About me
 - CUHK BSc. RMSc student
