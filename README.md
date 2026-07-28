@@ -9,7 +9,7 @@
     - Time Series Analysis Toolkit/Extreme Event Aware (η-) Learning (Chang & Sapsis, 2025) inspired Time Series Sample Generator
         - Use semi-supervised deeplearning to generate extreme event awared path for stress-testing.
         - Completely adapted the original logic to time series related work.
-        - Very Useful for stress-testing. 
+        - Note: Very Useful for stress-testing. 
         - Credit: Chang, K., & Sapsis, T. P. (2025)
     - Online Portfolio Selection/Adaptive_Mean_Reversion_Trading_Algo_(Tsang_et_al)
         - A mean reversion, robust optimization ply dynamic parameter selection model that consider transaction cost.
