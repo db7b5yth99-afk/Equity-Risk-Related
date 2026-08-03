@@ -33,6 +33,9 @@
 
 - Other Projects (From Latest to Oldest):
     - Online Portfolio Selection
+        - xgboost_discrete
+            - Use RSI, FS, MA to create discrete signal, feeding to xgboost for regime prediction.
+            - Note: The result is dominated by a hybrid deep-learning plus bayesian approach archived in private respiratory.
         - data_ingestion
             - Utility for backtest data feeding.
         - performance_analysis
