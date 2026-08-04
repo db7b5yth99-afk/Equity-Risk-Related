@@ -5,7 +5,7 @@
 
 
 # Project Index
-- Research Paper Model Recreation & Modifying _(OLPS related topic built on frictionless assumption)_
+- Research Paper Model Recreation & Modifying _(Learn from papers, Not textbook)_
     - Time Series Analysis Toolkit/Vanilla_GRU_TS_Generator.ipynb
         - Applied (η-) Learning on both tail.
         - Recursively use GRU for time series data generation.
