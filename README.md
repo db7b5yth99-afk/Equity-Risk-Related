@@ -5,7 +5,12 @@
 
 
 # Project Index
-- Research Paper Model Recreation & Modifying _(OLPS related topic built on frictionless assumption)_ 
+- Research Paper Model Recreation & Modifying _(OLPS related topic built on frictionless assumption)_
+    - Time Series Analysis Toolkit/Vanilla_GRU_TS_Generator.ipynb
+        - Applied η- Learning on both tail.
+        - Recursively use GRU for time series data generation.
+        - Inject randomness with adding normally distributed noise and multiplying log-normally distributed shocks to force regime change.
+        - Key Takeaway: Vanilla GRU can be a good for identifying momentum but discouraged to generate regime change events, stochastic injection is necessary for generating meaningful data.
     - Time Series Analysis Toolkit/Extreme Event Aware (η-) Learning (Chang & Sapsis, 2025) inspired Time Series Sample Generator
         - Use semi-supervised deeplearning to generate extreme event awared path for stress-testing.
         - Completely adapted the original logic to time series related work.
