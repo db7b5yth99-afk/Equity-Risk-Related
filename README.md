@@ -7,21 +7,22 @@
 # Project Index
 - Research Paper Model Recreation & Modifying _(OLPS related topic built on frictionless assumption)_
     - Time Series Analysis Toolkit/Vanilla_GRU_TS_Generator.ipynb
-        - Applied η- Learning on both tail.
+        - Applied (η-) Learning on both tail.
         - Recursively use GRU for time series data generation.
         - Inject randomness with adding normally distributed noise and multiplying log-normally distributed shocks to force regime change.
         - Key Takeaway: Vanilla GRU can be a good for identifying momentum but discouraged to generate regime change events, stochastic injection is necessary for generating meaningful data.
-    - Time Series Analysis Toolkit/Extreme Event Aware (η-) Learning (Chang & Sapsis, 2025) inspired Time Series Sample Generator
-        - Use semi-supervised deeplearning to generate extreme event awared path for stress-testing.
+        - Credit: Chang, K., & Sapsis, T. P. (2025)
+    - Time Series Analysis Toolkit/Random_Return_Generator.py
+        - Use semi-supervised deep-learning to generate extreme event awared path for stress-testing.
         - Completely adapted the original logic to time series related work.
-        - Note: Very Useful for stress-testing. 
+        - Note: Foundation for deep-learning application in stress-testing, relevent code will appear in future works. 
         - Credit: Chang, K., & Sapsis, T. P. (2025)
     - Online Portfolio Selection/Adaptive_Mean_Reversion_Trading_Algo_(Tsang_et_al)
         - A mean reversion, robust optimization ply dynamic parameter selection model that consider transaction cost.
         - Slightly modified the parameter selection logic with EWMA and optimization logic to allow risk seeking behaviour in some regimes.
         - Credit: Tsang et al (2025)
     - Online Portfolio Selection/Recursive_OLS_Algo_(Li_et_al)
-        - A recursive least square prediction combined with exponantial weighting FTW strategy.
+        - A recursive least square prediction combined with exponential weighting FTW strategy.
         - Note: DMD is just a hype, I do not see it appear in the paper, its just recursive multiple regression with Sherman-Morrison updating, and allocated with exponential gradient
         - Credit: Li et al (2026)
     - Online Portfolio Selection/Robust_Optimized_Recursive_OLS_Trading_Algo_(Hybrid)
@@ -31,7 +32,7 @@
         - Combined recursive least square prediction, robust optimization and dynamic parameter selection with EWMA logic.
         - Note: This is absolutely not worth doing, the return is worse then constant parameter or mean reversion. 
         - Credit: Li et al (2026), Tsang et al (2025)
-    - Referance list:
+    - Reference list:
         - Chang, K., & Sapsis, T. P. (2025). Extreme event aware ($\eta$-) learning. arXiv preprint arXiv:2510.19161.
         - Li, Jiahao & Zhang, Yong & Zheng, Xiaoteng, 2026. "Dynamic mode decomposition for online portfolio selection task," European Journal of Operational Research, Elsevier, vol. 328(1), pages 349-365.
         - Tsang, M. Y., Sit, T., & Wong, H. Y. (2025). Adaptive robust online portfolio selection. European Journal of Operational Research, 321(1), 214–230.
