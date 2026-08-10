@@ -6,6 +6,9 @@
 
 # Project Index
 - Research Paper Model Recreation & Modifying _(Learn from papers, Not textbook)_
+    - Online Portfolio Selection/CBKD_GRUM.ipynb
+        - A complex GRU based regime labeling model with a modified Bayesian knowledge distillation include my customized loss function alongside with first order Markov chain for prediction function.
+        - Credit: Fang et al. (2024)
     - Time Series Analysis Toolkit/Vanilla_GRU_TS_Generator.ipynb
         - Applied (η-) Learning on both tail.
         - Recursively use GRU for time series data generation.
@@ -34,6 +37,7 @@
         - Credit: Li et al (2026), Tsang et al (2025)
     - Reference list:
         - Chang, K., & Sapsis, T. P. (2025). Extreme event aware ($\eta$-) learning. arXiv preprint arXiv:2510.19161.
+        - Fang, L., Chen, Y., Zhong, W., & Ma, P. (2024). Bayesian knowledge distillation: A Bayesian perspective of distillation with uncertainty quantification. In Proceedings of the 41st International Conference on Machine Learning (PMLR 235).
         - Li, Jiahao & Zhang, Yong & Zheng, Xiaoteng, 2026. "Dynamic mode decomposition for online portfolio selection task," European Journal of Operational Research, Elsevier, vol. 328(1), pages 349-365.
         - Tsang, M. Y., Sit, T., & Wong, H. Y. (2025). Adaptive robust online portfolio selection. European Journal of Operational Research, 321(1), 214–230.
 
