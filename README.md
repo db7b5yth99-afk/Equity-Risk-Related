@@ -5,7 +5,7 @@
 
 
 # Project Index
-- Research Paper Inspired Projects _(Learn from papers, Not textbook)_
+- Research Paper Inspired Projects _(btw, trading algo here likely do not profit)_
     - Online Portfolio Selection/CBKD_GRUM.ipynb
         - A complex GRU based regime labeling model with a modified Bayesian knowledge distillation include my customized loss function alongside with first order Markov chain for prediction function.
         - Credit: Fang et al. (2024)
