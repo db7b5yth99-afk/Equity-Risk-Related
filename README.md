@@ -6,6 +6,8 @@
 
 # Project Index
 - Research Paper Inspired Projects _(btw, trading algo here likely do not profit)_
+    - Online Portfolio Selection/GRU_Vanilla.ipynb
+        - A simplified GRU based regime labeling method with NLP inspired data handling method.
     - Online Portfolio Selection/CBKD_GRUM.ipynb
         - A complex GRU based regime labeling model with a modified Bayesian knowledge distillation include my customized loss function alongside with first order Markov chain for prediction function.
         - Credit: Fang et al. (2024)
