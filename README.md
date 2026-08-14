@@ -20,7 +20,7 @@
     - Online Portfolio Selection/Extrema Detection Strategy/CBKD_GRUM_Dual.ipynb
         - Built directly on yop of previous version but with loss function modified and teacher student architecture modified for better Macro and Micro knowledge training.
         - Credit: Fang et al. (2024)
-    - Online Portfolio Selection/CBKD_GRUM.ipynb
+    - Online Portfolio Selection/Extrema Detection Strategy/CBKD_GRUM.ipynb
         - A complex GRU based regime labeling model with Bayesian knowledge distillation alongside with first order Markov chain for prediction function.
         - Credit: Fang et al. (2024)
     - Time Series Analysis Toolkit/Vanilla_GRU_TS_Generator.ipynb
