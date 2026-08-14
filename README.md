@@ -6,9 +6,18 @@
 
 # Project Index
 - Research Paper Inspired Projects _(btw, trading algo here likely do not profit)_
-    - Online Portfolio Selection/GRU_Vanilla.ipynb
+    - Online Portfolio Selection/Extrema Detection Strategy/GRU_CrossAsset_Fusion_Model_Specification.ipynb
+        - Architecture introduction pdf avaliable.
+        - Variant of Vanilla with multiple asset cross validate for false signal filtering.
+        - Credit: Fang et al. (2024)
+    - Online Portfolio Selection/Extrema Detection Strategy/SGLD_GRU_Extrema_Detection_Model.ipynb
+        - Architecture introduction pdf avaliable.
+        - Variant of Vanilla with Multiple Expert but with expert snapshot smapling.
+        - Credit: Fang et al. (2024)
+    - Online Portfolio Selection/Extrema Detection Strategy/GRU_Vanilla.ipynb
         - A simplified GRU based regime labeling method with NLP inspired data handling method.
-    - Online Portfolio Selection/CBKD_GRUM_.ipynb
+        - Credit: Fang et al. (2024)
+    - Online Portfolio Selection/Extrema Detection Strategy/CBKD_GRUM_Dual.ipynb
         - Built directly on yop of previous version but with loss function modified and teacher student architecture modified for better Macro and Micro knowledge training.
         - Credit: Fang et al. (2024)
     - Online Portfolio Selection/CBKD_GRUM.ipynb
