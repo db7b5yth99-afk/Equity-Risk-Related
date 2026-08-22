@@ -5,49 +5,37 @@
 
 # Project Index
 - Research Paper Inspired Projects _(btw, trading algos here are abandoned plans)_
-    - Online Portfolio Selection/Extrema Detection Strategy/GRU_CrossAsset_Fusion_Model_Specification.ipynb
-        - Architecture introduction pdf avaliable.
-        - Variant of Vanilla with multiple asset cross validate for false signal filtering.
-        - Credit: Fang et al. (2024)
-    - Online Portfolio Selection/Extrema Detection Strategy/SGLD_GRU_Extrema_Detection_Model.ipynb
-        - Architecture introduction pdf avaliable.
-        - Variant of Vanilla with Multiple Expert but with expert snapshot smapling.
-        - Credit: Fang et al. (2024)
-    - Online Portfolio Selection/Extrema Detection Strategy/GRU_Vanilla.ipynb
-        - A simplified GRU based regime labeling method with NLP inspired data handling method.
-        - Credit: Fang et al. (2024)
-    - Online Portfolio Selection/Extrema Detection Strategy/CBKD_GRUM_Dual.ipynb
-        - Built directly on yop of previous version but with loss function modified and teacher student architecture modified for better Macro and Micro knowledge training.
-        - Credit: Fang et al. (2024)
-    - Online Portfolio Selection/Extrema Detection Strategy/CBKD_GRUM.ipynb
-        - A complex GRU based regime labeling model with Bayesian knowledge distillation alongside with first order Markov chain for prediction function.
-        - Credit: Fang et al. (2024)
+    - Online Portfolio Selection/Extrema Detection Strategy
+        - Multiple revision of the model all included in the folder in .ipynb format.
+        - The closest to succeeded and confidential version is Turning_Point_Analysing_Engine.ipynb despite there is still some distance away from it.
+        - Fusion model open up new potential but it's computational intensive and abandoned. 
+        - Credit: Fang et al. (2024) for GRU model interval
     - Time Series Analysis Toolkit/Vanilla_GRU_TS_Generator.ipynb
         - Applied (η-) Learning on both tail.
         - Recursively use GRU for time series data generation.
         - Inject randomness with adding normally distributed noise and multiplying log-normally distributed shocks to force regime change.
         - Key Takeaway: Vanilla GRU can be a good for identifying momentum but discouraged to generate regime change events, stochastic injection is necessary for generating meaningful data.
-        - Credit: Chang, K., & Sapsis, T. P. (2025)
+        - Credit: Chang, K., & Sapsis, T. P. (2025) for EVT injection
     - Time Series Analysis Toolkit/Random_Return_Generator.py
         - Use semi-supervised deep-learning to generate extreme event awared path for stress-testing.
         - Completely adapted the original logic to time series related work.
         - Note: Foundation for deep-learning application in stress-testing, relevent code will appear in future works. 
-        - Credit: Chang, K., & Sapsis, T. P. (2025)
+        - Credit: Chang, K., & Sapsis, T. P. (2025) for EVT injection
     - Online Portfolio Selection/Adaptive_Mean_Reversion_Trading_Algo_(Tsang_et_al)
         - A mean reversion, robust optimization ply dynamic parameter selection model that consider transaction cost.
         - Slightly modified the parameter selection logic with EWMA and optimization logic to allow risk seeking behaviour in some regimes.
-        - Credit: Tsang et al (2025)
+        - Credit: Tsang et al (2025) as base model
     - Online Portfolio Selection/Recursive_OLS_Algo_(Li_et_al)
         - A recursive least square prediction combined with exponential weighting FTW strategy.
         - Note: DMD is just a hype, I do not see it appear in the paper, its just recursive multiple regression with Sherman-Morrison updating, and allocated with exponential gradient
-        - Credit: Li et al (2026)
+        - Credit: Li et al (2026) as base model
     - Online Portfolio Selection/Robust_Optimized_Recursive_OLS_Trading_Algo_(Hybrid)
         - Combined recursive least square prediction and robust optimization
-        - Credit: Li et al (2026), Tsang et al (2025)
+        - Credit: Li et al (2026), Tsang et al (2025) both as base model
     - Online Portfolio Selection/Adaptive_Recursive_OLS_(Hybrid)
         - Combined recursive least square prediction, robust optimization and dynamic parameter selection with EWMA logic.
         - Note: This is absolutely not worth doing, the return is worse then constant parameter or mean reversion. 
-        - Credit: Li et al (2026), Tsang et al (2025)
+        - Credit: Li et al (2026), Tsang et al (2025) both as base model
     - Reference list:
         - Chang, K., & Sapsis, T. P. (2025). Extreme event aware ($\eta$-) learning. arXiv preprint arXiv:2510.19161.
         - Fang, L., Chen, Y., Zhong, W., & Ma, P. (2024). Bayesian knowledge distillation: A Bayesian perspective of distillation with uncertainty quantification. In Proceedings of the 41st International Conference on Machine Learning (PMLR 235).
