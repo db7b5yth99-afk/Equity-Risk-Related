@@ -1,11 +1,10 @@
 # About this space
-- This is the place where I save my Python learning projects, you may understand my knowledge base pretty well here. 
-- Code here are useful as I may use them to feed LLM for localization when doing simular task. 
+- This is the place where I save my projects' side products, you may understand my knowledge base pretty well here. 
 - Request of accessing private respritory is selectively avaliable on request.
 
 
 # Project Index
-- Research Paper Inspired Projects _(btw, trading algo here likely do not profit)_
+- Research Paper Inspired Projects _(btw, trading algos here are abandoned plans)_
     - Online Portfolio Selection/Extrema Detection Strategy/GRU_CrossAsset_Fusion_Model_Specification.ipynb
         - Architecture introduction pdf avaliable.
         - Variant of Vanilla with multiple asset cross validate for false signal filtering.
