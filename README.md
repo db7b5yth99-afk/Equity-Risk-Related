@@ -5,6 +5,9 @@
 
 # Project Index
 - Research Paper Inspired Projects _(btw, trading algos here are abandoned plans)_
+    - Online Portfolio Selection/STSG_ARAE_EtaT.ipynb
+        - Apply NLP autoencoder technique and extreme event RNG injection for extreme event awared time series data generation.
+        - Credit: Chang, K., & Sapsis, T. P. (2025) for EVT injection, Zhao et al (2018) for autoencoder structure
     - Online Portfolio Selection/Extrema Detection Strategy
         - Multiple revision of the model all included in the folder in .ipynb format.
         - The closest to succeeded and confidential version is Turning_Point_Analysing_Engine.ipynb despite there is still some distance away from it.
@@ -41,6 +44,7 @@
         - Fang, L., Chen, Y., Zhong, W., & Ma, P. (2024). Bayesian knowledge distillation: A Bayesian perspective of distillation with uncertainty quantification. In Proceedings of the 41st International Conference on Machine Learning (PMLR 235).
         - Li, Jiahao & Zhang, Yong & Zheng, Xiaoteng, 2026. "Dynamic mode decomposition for online portfolio selection task," European Journal of Operational Research, Elsevier, vol. 328(1), pages 349-365.
         - Tsang, M. Y., Sit, T., & Wong, H. Y. (2025). Adaptive robust online portfolio selection. European Journal of Operational Research, 321(1), 214–230.
+        - Zhao, J., Kim, Y., Zhang, K., Rush, A. M., & LeCun, Y. (2018). Adversarially regularized autoencoders. Proceedings of the 35th International Conference on Machine Learning, PMLR 80.  
 
 - Other Projects (From Latest to Oldest):
     - Online Portfolio Selection
