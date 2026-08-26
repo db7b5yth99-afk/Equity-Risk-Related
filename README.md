@@ -4,10 +4,10 @@
 
 
 # Project Index
-- Research Paper Inspired Projects _(btw, trading algos here are abandoned plans)_
+- Core Projects _(btw, trading algos here are abandoned plans or side products)_
     - Extreme-Value-Aware Synthetic Data Generator for Stress Testing/TCN_ARAE_EtaT.ipynb
         - TCN-Based Autoencoder: Replaces recurrent networks with 1D causal convolutions (TCNs) to process continuous log-returns, eliminating recency bias and natively preserving high-frequency, jagged market volatility
-        - EVT-Driven Tail Engine ($\eta$-RNG): Generates extreme market shocks bounded by Generalized Pareto Distribution (GPD) limits, utilizing a Wasserstein penalty with a linear warmup to force realistic fat-tailed crashes and rallies without mode collapse.
+        - EVT-Driven Tail Engine (η-RNG): Generates extreme market shocks bounded by Generalized Pareto Distribution (GPD) limits, utilizing a Wasserstein penalty with a linear warmup to force realistic fat-tailed crashes and rallies without mode collapse.
         - WGAN-GP Organizer: Employs a Wasserstein GAN with a Gradient Penalty as a ranking mechanism to seamlessly evaluate and integrate the generated extreme shocks into the continuous historical market manifold.
     - Extreme-Value-Aware Synthetic Data Generator for Stress Testing/STSG_ARAE_EtaT.ipynb
         - Apply NLP autoencoder technique and extreme event RNG injection for extreme event awared time series data generation.
